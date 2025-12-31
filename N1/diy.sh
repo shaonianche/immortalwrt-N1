@@ -6,7 +6,6 @@
 
 # Add packages
 git clone --depth=1 https://github.com/ophub/luci-app-amlogic package/amlogic
-git clone  https://github.com/linkease/luci-app-linkease package/linkease
 git clone  https://github.com/gdy666/luci-app-lucky.git package/lucky
 
 # 加入OpenClash核心
@@ -16,7 +15,6 @@ git clone  https://github.com/gdy666/luci-app-lucky.git package/lucky
 echo "
 # 插件
 CONFIG_PACKAGE_luci-app-amlogic=y
-CONFIG_PACKAGE_luci-app-linkease=y
 CONFIG_PACKAGE_luci-app-lucky=y
 " >> .config
 
