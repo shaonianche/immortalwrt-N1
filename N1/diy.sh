@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Remove packages
-#rm -rf feeds/packages/net/v2ray-geodata
+# rm -rf feeds/packages/net/v2ray-geodata
 
 
 # Add packages
@@ -10,8 +10,8 @@ git clone  https://github.com/linkease/luci-app-linkease package/linkease
 git clone  https://github.com/gdy666/luci-app-lucky.git package/lucky
 
 # 加入OpenClash核心
-#chmod -R a+x $GITHUB_WORKSPACE/preset-clash-core.sh
-#$GITHUB_WORKSPACE/N1/preset-clash-core.sh
+# chmod -R a+x $GITHUB_WORKSPACE/preset-clash-core.sh
+# $GITHUB_WORKSPACE/N1/preset-clash-core.sh
 
 echo "
 # 插件
@@ -21,7 +21,7 @@ CONFIG_PACKAGE_luci-app-lucky=y
 " >> .config
 
 # 修改默认IP
-sed -i 's/192.168.1.1/192.168.0.2/g' package/base-files/files/bin/config_generate
+sed -i 's/192.168.1.1/192.168.31.2/g' package/base-files/files/bin/config_generate
 
 # 修改默认主题
 sed -i 's/luci-theme-design/luci-theme-argon/g' feeds/luci/collections/luci/Makefile
