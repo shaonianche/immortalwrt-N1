@@ -33,27 +33,27 @@ jobs:
       - name: Checkout
         uses: actions/checkout@main
 
-      # - name: Free up space
-      #   uses: jlumbroso/free-disk-space@main
-      #   with:
-      #     tool-cache: true
-      #     android: true
-      #     dotnet: true
-      #     haskell: true
-      #     large-packages: true
-      #     docker-images: true
-      #     swap-storage: true
-
-      - name: Maximize build space
-        uses: easimon/maximize-build-space@master
+      - name: Free up space
+        uses: jlumbroso/free-disk-space@main
         with:
-          swap-size-mb: 1024
-          temp-reserve-mb: 512
-          root-reserve-mb: 4608
-          remove-dotnet: "true"
-          remove-android: "true"
-          remove-haskell: "true"
-          remove-codeql: "true"
+          tool-cache: true
+          android: true
+          dotnet: true
+          haskell: true
+          large-packages: true
+          docker-images: true
+          swap-storage: true
+
+      # - name: Maximize build space
+      #   uses: easimon/maximize-build-space@master
+      #   with:
+      #     swap-size-mb: 1024
+      #     temp-reserve-mb: 512
+      #     root-reserve-mb: 4608
+      #     remove-dotnet: "true"
+      #     remove-android: "true"
+      #     remove-haskell: "true"
+      #     remove-codeql: "true"
 
       - name: Initialize environment
         env:
